@@ -5,10 +5,22 @@ const port = process.env.PORT || 3020; // 포트 지정
 const __dirname = path.resolve();
 
 app.use(express.static("public")); //정적파일 루트 지정
+app.use(express.static("src")); //정적파일 루트 지정
+
 /* 메인페이지 */
 app.get('/', function(req, res){
   // res.send('test');
   res.sendFile(__dirname + "/public/main.html")
+});
+/* 마우스오버 모듈 */
+app.get('/hover', function(req, res){
+  res.sendFile(__dirname + "/src/hover.js")
+});
+app.get('/about', function(req, res){
+  res.sendFile(__dirname + "/src/page/about.js")
+});
+app.get('/router', function (req, res) {
+  res.sendFile(__dirname + '/src/router.js');
 });
 
 /* 에러페이지 */

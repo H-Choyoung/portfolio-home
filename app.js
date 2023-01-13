@@ -1,40 +1,21 @@
-import express from "express";
-import path from "path"
+const express = require('express');
+const path = require('path');
 const app = express(); //express함수 변수에 저장
-const port = process.env.PORT || 3020; // 포트 지정
-const __dirname = path.resolve();
+const port = process.env.PORT || 3020; //포트 지정
 
-app.use(express.static("public")); //정적파일 루트 지정
-app.use(express.static("src")); //정적파일 루트 지정
+/**
+ * *정적 파일 루트 지정
+ * path.resolve로 인자로 받은 값들을 하나의 문자열로 만든 뒤 정적 디렉토리에 대한 마운트 경로 지정
+ * app.js 실행경로 + "/path"를 localhost:port/path로 마운트
+ */
+app.use('/src', express.static(path.resolve(__dirname, 'front', 'src')));
+app.use('/img', express.static(path.resolve(__dirname, 'front', 'img')));
 
-/* 메인페이지 */
-app.get('/', function(req, res){
-  // res.send('test');
-  res.sendFile(__dirname + "/public/main.html")
-});
-/* 마우스오버 모듈 */
-app.get('/hover', function(req, res){
-  res.sendFile(__dirname + "/src/hover.js")
-});
-app.get('/about', function(req, res){
-  res.sendFile(__dirname + "/src/page/about.js")
-});
-app.get('/router', function (req, res) {
-  res.sendFile(__dirname + '/src/router.js');
+// main
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve('front', 'main.html'));
 });
 
-/* 에러페이지 */
-app.use((req, res) => {
-  res.type('text/plain')
-  res.status(404)
-  res.send('404 Not Found')
-})
-app.use((err, req, res) => {
-  console.log(err)
-  res.type('text/plain')
-  res.status(500)
-  res.send('500 server error')
-})
-app.listen(port, function(){
+app.listen(port, () => {
   console.log(`server running on port ${port}`);
-})
+});

@@ -1,8 +1,8 @@
-import hover from "/hover";
-import router from "/router";
+import hover from "./modules/hover.js"
+import pageRouteEvent from "./modules/pageRouteEvent.js"
 
 const root = document.getElementById("root");
-/* 태그 설정 */
+/* 메인 레이아웃 지정 */
 root.innerHTML = `
 <div id="side">
   <img id="sideImg" src="/img/side.png"></img>
@@ -15,6 +15,7 @@ root.innerHTML = `
     <p class="menuText">Have A Good Day...<br>　Have A Good Day...</p>
   </div>
 </div>`;
+// dom 가져오기
 const side = document.getElementById("side");
 const main = document.getElementById("main");
 const menu = document.getElementById("menu");
@@ -26,7 +27,7 @@ const makeButtons =(parent)=> {
   const menus = ["ABOUT", "PORTFOLIO", "CONTACT", "ETC", "MAIN"]
   menus.forEach((val, idx) => {
     const button = `
-    <div class="buttonContainer${idx+1}"
+    <nav class="buttonContainer${idx + 1}"
     >
       <a href="/${val}" class="buttonBody" data-link
       style="width:90px; height:47px; 
@@ -41,9 +42,10 @@ const makeButtons =(parent)=> {
       top: 47px;
       right: 50px;
       z-index: 2;
-      ">
-      <p class="buttonTxt" style="color:#fff; font-family:'BIZ UDMincho',serif; font-size:11pt">${val}</p>
-      </a>
+      color:#fff; 
+      font-family:'BIZ UDMincho',serif; font-size:11pt;
+      text-decoration-line: none;
+      ">${val}</a>
       <div class="buttonBack" 
       style="position: relative;
       right: 33px;
@@ -55,7 +57,7 @@ const makeButtons =(parent)=> {
       background-color:#D9D9D9; 
       mix-blend-mode: difference; 
       "></div>
-    </div>`
+    </nav>`;
     parent.innerHTML += button;
   })
 }
@@ -84,7 +86,7 @@ menu.style.borderLeft = "1px solid #D9D9D9";
 const mainButton = document.getElementsByClassName("buttonContainer5");
 console.log(mainButton[0])
 mainButton[0].style.padding = "0" //초기화
-mainButton[0].style.paddingTop = "19rem"
+mainButton[0].style.paddingTop = "9rem"
 // 버튼 그림자 마우스오버 스타일 설정
 hover(".buttonBody", ".buttonBack", "#00FF38");
 
@@ -107,41 +109,5 @@ main.style.alignItems = "center";
 const mainImg = document.getElementById("mainImg");
 mainImg.style.width = "90%";
 
-const mainPageContent =(targets)=> {
-  const target = document.querySelectorAll(targets);
-  target.forEach((val,idx) => {
-    const txtContents = target[idx].children[0].innerText;
-    target[idx].addEventListener("click", () => {
-      switch(txtContents){
-        case "ABOUT":
-          main.innerHTML = `<div 
-          style="font-family:'KyoboHandwriting2021sjy';
-          font-size: 14pt;
-          color: #fff;
-          ">ABOUT</div>`;
-        case "PORTFOLIO":
-        case "CONTACT":
-        case "ETC":
-        case "MAIN":
-      }
-   }, false);
-  });
-}
-// mainPageContent(".buttonBody");
-
-const pageRouteEvent =()=> {
-  document.body.addEventListener('click', (e) => {
-    if (e.target.matches('[data-link]')) {
-      // data-link라는 속성(a 태그)이 있는 곳에서만 동작
-      e.preventDefault();
-      history.pushState(null, null, e.target.href); //url 변경할 수 있게 해줌
-      router();
-    }
-  });
-  router();
-}
-// 뒤로가기시에도 데이터 나오게
-window.addEventListener('popstate', () => {
-  router();
-});
+/* 페이지 라우트 이벤트 */
 pageRouteEvent();

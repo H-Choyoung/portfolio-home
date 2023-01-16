@@ -3,10 +3,11 @@ import ABOUT from "../page/about.js";
 import PORTFOLIO from "../page/portfolio.js";
 import CONTACT from "../page/contact.js";
 import ETC from "../page/etc.js";
+import NotFound from "../page/NotFound.js";
 
 const router = async () => {
   const routes = [
-    { path: '/', view: MAIN },
+    // { path: '/', view: MAIN },
     { path: '/ABOUT', view: ABOUT },
     { path: '/PORTFOLIO', view: PORTFOLIO },
     { path: '/CONTACT', view: CONTACT },
@@ -20,9 +21,19 @@ const router = async () => {
     };
   });
   let match = pageMatches.find((pageMatch) => pageMatch.isMatch);
-
-  const page = new match.route.view();
-  document.querySelector('#main').innerHTML = await page.getHtml();
+  console.log(new match.route.view());
+  if (!match) {
+    match = {
+      route: location.pathname,
+      isMatch: true,
+    };
+    const page = new NotFound();
+    document.querySelector('#main').innerHTML = await page.getHtml();
+  } else {
+    const page = new match.route.view();
+    document.querySelector('#main').innerHTML = await page.getHtml();
+    console.log(page);
+  }
 };
-// router();
+
 export default router;

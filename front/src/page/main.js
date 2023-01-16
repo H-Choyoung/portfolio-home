@@ -3,6 +3,7 @@ export default class {
     document.title = 'CHOY_PORTFOLIO';
   }
   async getHtml() {
-    return `<img id="mainImg" src="/img/main.svg"></img>`;
+    // return `<img id="mainImg" src="/img/main.svg"></img>`;
+    return window.location.href = 'http://localhost:3020/';
   }
 }

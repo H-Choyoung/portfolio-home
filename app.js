@@ -12,9 +12,23 @@ app.use('/src', express.static(path.resolve(__dirname, 'front', 'src')));
 app.use('/img', express.static(path.resolve(__dirname, 'front', 'img')));
 
 // main
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.resolve('front', 'main.html'));
 });
+
+/* 에러페이지 */
+app.use((req, res) => {
+  res.type('text/html')
+  res.status(404)
+  res.send('404 Not Found')
+  // res.sendFile(path.resolve('front', 'main.html'));
+})
+app.use((err, req, res) => {
+  console.log(err)
+  res.type('text/plain')
+  res.status(500)
+  res.send('500 server error')
+})
 
 app.listen(port, () => {
   console.log(`server running on port ${port}`);

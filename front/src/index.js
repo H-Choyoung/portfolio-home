@@ -95,7 +95,7 @@ menuTxt[0].style.color = "#fff"
 menuTxt[0].style.position = "absolute";
 menuTxt[0].style.rotate = "90deg";
 menuTxt[0].style.right = "-1rem";
-menuTxt[0].style.bottom = "13rem";
+menuTxt[0].style.bottom = "23rem";
 menuTxt[0].style.fontFamily = "'Blinker', sans-serif";
 menuTxt[0].style.fontSize = "10pt";
 
@@ -111,3 +111,9 @@ mainImg.style.width = "90%";
 
 /* 페이지 라우트 이벤트 */
 pageRouteEvent();
+
+// window.addEventListener('beforeunload', (e) => {
+//   // 명세에 따라 preventDefault는 호출해야하며, 기본 동작을 방지.
+//   e.preventDefault();
+//   console.log(e);
+// });

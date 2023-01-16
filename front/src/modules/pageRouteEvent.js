@@ -12,7 +12,8 @@ const pageRouteEvent = () => {
     router();
   });
   // 뒤로가기시에도 데이터 나오게
-  window.addEventListener('popstate', () => {
+  window.addEventListener('popstate', (e) => {
+    // console.log(e.target)
     router();
   });
 };

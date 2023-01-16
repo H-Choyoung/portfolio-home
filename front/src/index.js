@@ -66,7 +66,8 @@ makeButtons(buttons);
 /* 기본 스타일 설정 */
 root.style.width = "100vw";
 root.style.height = "100vh";
-root.style.backgroundImage = "url('/img/back.png')";
+root.style.backgroundImage =
+  "url('https://images2.imgbox.com/21/9a/mKK9JdCO_o.png')";
 root.style.backgroundRepeat = "no-repeat"
 root.style.display = "flex"
 root.style.justifyContent = "space-between"

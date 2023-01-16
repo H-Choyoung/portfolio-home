@@ -1,8 +1,8 @@
-import MAIN from "../page/main.js";
-import ABOUT from "../page/about.js";
-import PORTFOLIO from "../page/portfolio.js";
-import CONTACT from "../page/contact.js";
-import ETC from "../page/etc.js";
+import MAIN from "../page/Main.js";
+import ABOUT from "../page/About.js";
+import PORTFOLIO from "../page/Portfolio.js";
+import CONTACT from "../page/Contact.js";
+import ETC from "../page/Etc.js";
 import NotFound from "../page/NotFound.js";
 
 const router = async () => {

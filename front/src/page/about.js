@@ -21,7 +21,6 @@ export default class {
       });
       return set;
     }
-    console.log(stackSet())
     const titleSet =(titleName)=> {
       return `
       <section class="sectionTitle"
@@ -114,7 +113,7 @@ export default class {
         <div style="
         display: flex;
         align-items: center;
-        max-width: 41vw;
+        max-width: 50vw;
         flex-flow: wrap;
         ">
         ${stackSet()}

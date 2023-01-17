@@ -1,8 +1,27 @@
+import stacks from "./stacks.js";
+
 export default class {
   constructor() {
     document.title = "ABOUT";
   }
   async getHtml() {
+    const stackSet =()=> {
+      let set = [];
+      stacks.forEach(val => {
+        const result = `<div style="
+        display: flex; align-items: center;
+        flex-direction: column; padding: 0.8rem 1rem; opacity: 90%; width:100px;">
+        <img src='${val.src}' style="width:85%; padding-bottom: 0.8rem;">
+        <p style="font-family:'Inconsolata', monospace;
+        color: #D9D9D9;
+        font-size: 12pt;
+        ">${val.stack}</p>
+        </div>`;
+        set.push(result);
+      });
+      return set;
+    }
+    console.log(stackSet())
     const titleSet =(titleName)=> {
       return `
       <section class="sectionTitle"
@@ -10,7 +29,7 @@ export default class {
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding-bottom: 3rem;
+        padding: 2rem 0;
         ">
         <h3 
         style="font-family:'BIZ UDMincho',serif;
@@ -95,9 +114,10 @@ export default class {
         <div style="
         display: flex;
         align-items: center;
-        width: 45%; 
+        max-width: 41vw;
+        flex-flow: wrap;
         ">
-        <img>
+        ${stackSet()}
         </div>
       </section>
     </div>

@@ -12,9 +12,7 @@ root.innerHTML = `
   <img id="mainImg" src="/img/main.svg"></img>
 </div>
 <div id="menu">
-  <div id="buttons">
-    <p class="menuText">Have A Good Day...<br>　Have A Good Day...</p>
-  </div>
+  <div id="buttons"></div>
 </div>`;
 // dom 가져오기
 const side = document.getElementById("side");
@@ -93,13 +91,13 @@ mainButton[0].style.paddingTop = "9rem"
 hover(".buttonBody", ".buttonBack", "#00FF38");
 
 // 메뉴 장식용 텍스트 스타일 설정
-menuTxt[0].style.color = "#fff"
-menuTxt[0].style.position = "absolute";
-menuTxt[0].style.rotate = "90deg";
-menuTxt[0].style.right = "-1rem";
-menuTxt[0].style.bottom = "23rem";
-menuTxt[0].style.fontFamily = "'Blinker', sans-serif";
-menuTxt[0].style.fontSize = "10pt";
+// menuTxt[0].style.color = "#fff"
+// menuTxt[0].style.position = "absolute";
+// menuTxt[0].style.rotate = "90deg";
+// menuTxt[0].style.right = "-1rem";
+// menuTxt[0].style.bottom = "23rem";
+// menuTxt[0].style.fontFamily = "'Blinker', sans-serif";
+// menuTxt[0].style.fontSize = "10pt";
 
 /* 메인 스타일 설정 */
 // main.style.width = "90%";

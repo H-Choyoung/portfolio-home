@@ -21,14 +21,14 @@ export default class {
       });
       return set;
     }
-    const titleSet =(titleName)=> {
+    const titleSet = (titleName) => {
       return `
       <section class="sectionTitle"
         style="
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 2rem 0;
+        padding: 4rem 0 3rem 0;
         ">
         <h3 
         style="font-family:'BIZ UDMincho',serif;
@@ -37,28 +37,31 @@ export default class {
         padding:0; margin: 1rem;
         "
         >${titleName}</h3>
-        <div class="lines">
+        <div class="lines" 
+        style="display: flex; align-items: center;">
           <div class="line" 
-          style=" width: 50vw;
+          style=" width: 30vw;
           border-bottom: 1px solid #D9D9D9;
           "></div>
           <div class="circle" 
           style="width:14px; height:14px; border-radius:50%; background-color:#D9D9D9;
-          position: relative;
-          top: 50%; left: 50%;
-          transform: translate(-50%, -50%);
+          "></div>
+          <div class="line" 
+          style=" width: 30vw;
+          border-bottom: 1px solid #D9D9D9;
           "></div>
         </div>
       </section>
       `;
-    }
+    };
     return `
-    /* ABOUT ME */
     <div id="allContainer"
       style="
       display: flex;
       align-items: center;
       flex-direction: column;
+      height: 100vh;
+      overflow: clip scroll;
     ">
       <div class="sectionContainer"
       style="
@@ -113,8 +116,9 @@ export default class {
         <div style="
         display: flex;
         align-items: center;
-        max-width: 50vw;
+        max-width: 60vw;
         flex-flow: wrap;
+        margin-bottom: 2rem;
         ">
         ${stackSet()}
         </div>

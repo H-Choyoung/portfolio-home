@@ -12,7 +12,7 @@ export default class {
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 4rem 0 3rem 0;
+        padding-bottom: 3rem;
         ">
         <h3 
         style="font-family:'BIZ UDMincho',serif;
@@ -138,15 +138,16 @@ export default class {
         </div>
       `;
     };
-    
+    scrollEvent();
+
     return `
-    ${scrollEvent()}
-      <div id="projectsContainer" style="display: flex; flex-direction: column; align-items: center; overflow: clip scroll; height: 100vh">
-        <div style="height: 100vh; display: flex; flex-direction: column; align-items: center;">
+    <div id="projectsContainer" style="display: flex; flex-direction: column; align-items: center; overflow: clip scroll; 
+    width: 60vw; height: 100vh">
+      <div style="height: fit-content; display: flex; flex-direction: column; align-items: center;
+      padding: 3rem 0;
+      ">
           ${titleSet('TEAM PROJECT #1')}
-          ${imgSet(
-            'https://lh3.googleusercontent.com/y1zoXxv6VkTJzuW9Pb2sBQ6kqIrHhOF2F1eaf232sC08wRwVNhTI1aPuNvUK9WN61rQ5L_0upLSaR-MEAl1TS8Tij0s0v0LAXKScWkEfHzyYHddChOU8CJTmnij3oKqabMv99ME-mihPtZUz7lkNizSNnc6PQETCoyLSgVMHPeylwpLO-BmqAv2FqkD3gvmGcgxpVB4VKqVDoai0SJSJPF40xxcZcCFky5A0sUgDFVikCosIA0glzb3ngw4cHWF_nnzLYqzaiRFRyjNzYzojbOG_XaD0YXw2AweihzdJSZK1gK2zUNx-ScX-LmnLqeDddOFqj2yg2U0zv2z6VV0gAi1YsnA_3b6ZqOjBLAUOFpgWYNHj5FDIN_KoEgVDAh6WZQIvjORb-8zxoBpUQg47tRaHIuX_kPfkCuSqyH3YmnFa1R4Rtl61o9m1YVD0_fgQfgWCElT7F1O8I4mG27rfrBVjp5hJhGvCUemdj964750l5aMN4BykZqtEpe3CLVxnQEEyBn3Dil2OZB8MJqHm0i3JEj32NVIjaa5am5ERCKIJAuxqf_17dj2qbHZ4aBlgzlVxocqMcoZ71_oTmt_tHViXdSmqlnze4dSikiq9hAVtbbjWwR7N2zEeftHCRsCgdYMQ_1Bnv6d9k5JE4OK824MSP4-PLxRB8rjPhOkjVPmnAPB3FRM-D6tilDyIfpuuMFoxTfnCBqfEfb_Phexxsb3NBzt_Zq3xSYffAnCAIJFS6U0PpMsNb9H72sx6o22Gh4MzaBZHmusnLsPwDjPdjLsh7dVR1ruQtih6KoTbxJ5YBXxmEi_ik1VQuaECwgMa_tvOJ_dMUlxwm3ymEdqtG47G6LHmwYEqc5Mvmf2GUXPOL8YwePCtHf1OQrbTg22dU-IGwXySQtq38lAE_qbwWCclXdzN5AGv_uOBNccxu2l0H7SnBcy72MYPD1chqcNYOF3YWB0nZmOFYmaeGjw=w955-h438-no?authuser=1'
-          )}
+          ${imgSet('https://images2.imgbox.com/f3/56/PpcbHNX5_o.jpg')}
           ${projectTitleAndDesc(
             '프로젝트명',
             '어쩌구저쩌구',
@@ -156,9 +157,9 @@ export default class {
             '내가 담당한 기능'
           )}
         </div>
-        <div style="height: 100vh; display: flex; flex-direction: column; align-items: center;">
+        <div style="height: fit-content; display: flex; flex-direction: column; align-items: center; padding: 3rem 0;">
           ${titleSet('TEAM PROJECT #2')}
-          ${imgSet('')}
+          ${imgSet('https://images2.imgbox.com/f3/56/PpcbHNX5_o.jpg')}
           ${projectTitleAndDesc(
             '프로젝트명2',
             '어쩌구저쩌구2',
@@ -168,9 +169,9 @@ export default class {
             '내가 담당한 기능'
           )}
         </div>
-          <div style="height: 100vh; display: flex; flex-direction: column; align-items: center;">
+          <div style="height: fit-content; display: flex; flex-direction: column; align-items: center; padding: 3rem 0;">
           ${titleSet('TEAM PROJECT #3')}
-          ${imgSet('')}
+          ${imgSet('https://images2.imgbox.com/f3/56/PpcbHNX5_o.jpg')}
           ${projectTitleAndDesc(
             '프로젝트명3',
             '어쩌구저쩌구3',

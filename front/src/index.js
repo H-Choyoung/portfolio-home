@@ -5,6 +5,7 @@ const root = document.getElementById("root");
 /* 메인 레이아웃 지정 */
 root.innerHTML = `
 <div id="side">
+  <span id="sideBtnPlace"></span>
   <img id="sideImg" src="/img/side.png"></img>
 </div>
 <div id="main">

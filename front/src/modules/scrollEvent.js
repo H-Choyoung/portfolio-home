@@ -4,12 +4,12 @@ const scrollEvent = () => {
   const main = document.querySelector('#main');
   const sideBtnPlace = document.querySelector('#sideBtnPlace');
 
-  let test = ["1", "2", "3"];
+  let test = [1,2,3,4];
   const sideMenus = (btnNums) => {
     let set = [];
     for (let num in btnNums) {
       const sideMenuBtn = `
-        <div id="upBtn" 
+        <div id="scrollBtn" 
           style="width:fit-content; height:fit-content; 
           border:1px solid #fff; 
           border-top-left-radius: 2rem;
@@ -96,7 +96,26 @@ const scrollEvent = () => {
   // sideMenus2();
   for (let i = 0; i < btnLen; i++) {
     const targetBtns = sideBtnPlace.children[0].children[i]; //클릭이벤트 타겟 지정
-    // console.log(btns);
+    /* 마우스오버 이벤트 */
+    targetBtns.addEventListener(
+      'mouseover',
+      (event) => {
+        targetBtns.style.backgroundColor = '#00f536';
+        targetBtns.style.transition = '0.3s';
+        targetBtns.style.mixBlendMode = 'difference';
+      },
+      false
+    );
+    targetBtns.addEventListener(
+      'mouseout',
+      (event) => {
+        targetBtns.style.backgroundColor = 'transparent';
+        targetBtns.style.transition = '0.3s';
+        targetBtns.style.mixBlendMode = 'normal';
+      },
+      false
+    );
+    /* 클릭이벤트 */
     targetBtns.addEventListener('click', (e) => {
       const projectsContainer = main.children[0]; //스크롤될 화면 페이지
       const totalPageNums = projectsContainer.children.length; //한 번에 이동될 화면 단위 수

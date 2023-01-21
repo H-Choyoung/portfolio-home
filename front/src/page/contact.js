@@ -1,3 +1,5 @@
+import titleSet from "../modules/titleSet.js";
+
 export default class {
   constructor() {
     document.title = 'CONTACT';
@@ -7,7 +9,8 @@ export default class {
     style="font-family:'KyoboHandwriting2021sjy';
     font-size: 14pt;
     color: #fff;
-    ">CONTACT
+    ">
+    ${titleSet("Contact Me")}
   </div>`;
   }
 }

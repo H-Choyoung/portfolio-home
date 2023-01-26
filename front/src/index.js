@@ -10,6 +10,7 @@ root.innerHTML = `
 </div>
 <div id="main">
   <img id="mainImg" src="/img/main.svg"></img>
+  <span id="formPlace"></span>
 </div>
 <div id="menu">
   <div id="buttons"></div>

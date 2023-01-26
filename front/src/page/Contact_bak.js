@@ -7,7 +7,6 @@ export default class {
   }
   async getHtml() {
     sideMenus([]); //프로젝트 메뉴 버튼 렌더링 방지
-    let test = document.querySelector('.submit');
 
     const inputAlert = () => {
       const qr = document.querySelectorAll('.inputs');
@@ -83,8 +82,8 @@ export default class {
       width: inherit;
       display: flex; justify-content: flex-end;
       ">
-        <input class="submit" type="button" value="SEND MAIL"
-        onclick=""
+        <input class="submit" type="submit" value="SEND MAIL"
+        terget="blankifr"
         style="display: block; 
         border: 1px solid #d9d9d9;
         background-color:#000;
@@ -98,6 +97,7 @@ export default class {
         font-size: 14pt;
         ">
       </div>
+      <iframe name='blankifr' style='display:none;'></iframe>
     </form>
   </div>
   </div>

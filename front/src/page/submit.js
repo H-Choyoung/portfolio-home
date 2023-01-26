@@ -1,17 +1,13 @@
-import sideMenus from '../modules/projectScrollBtns.js';
-
 export default class {
   constructor() {
-    document.title = 'ETC';
+    document.title = 'SUBMIT';
   }
   async getHtml() {
-    sideMenus([]); //프로젝트 메뉴 버튼 렌더링 방지
-
     return `<div 
     style="font-family:'KyoboHandwriting2021sjy';
     font-size: 14pt;
     color: #fff;
-    ">ETC
+    ">전송 완료 되었습니다. 
   </div>`;
   }
 }

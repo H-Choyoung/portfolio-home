@@ -1,13 +1,16 @@
 import stacks from "./stacks.js";
+import sideMenus from '../modules/projectScrollBtns.js';
 
 export default class {
   constructor() {
     document.title = "ABOUT";
   }
   async getHtml() {
-    const stackSet =()=> {
+    sideMenus([]); //프로젝트 메뉴 버튼 렌더링 방지
+
+    const stackSet = () => {
       let set = [];
-      stacks.forEach(val => {
+      stacks.forEach((val) => {
         const result = `<div style="
         display: flex; align-items: center;
         flex-direction: column; padding: 0.8rem 1rem; opacity: 90%; width:100px;">
@@ -20,7 +23,7 @@ export default class {
         set.push(result);
       });
       return set;
-    }
+    };
     const titleSet = (titleName) => {
       return `
       <section class="sectionTitle"

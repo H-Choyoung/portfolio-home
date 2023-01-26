@@ -4,6 +4,7 @@ import PORTFOLIO from "../page/Portfolio.js";
 import CONTACT from "../page/Contact.js";
 import ETC from "../page/Etc.js";
 import NotFound from "../page/NotFound.js";
+import SUBMIT from "../page/submit.js";
 
 const router = async () => {
   const routes = [
@@ -13,6 +14,7 @@ const router = async () => {
     { path: '/CONTACT', view: CONTACT },
     { path: '/ETC', view: ETC },
     { path: '/MAIN', view: MAIN },
+    { path: '/SUBMIT', view: SUBMIT },
   ];
   const pageMatches = routes.map((route) => {
     return {

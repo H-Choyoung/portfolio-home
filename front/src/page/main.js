@@ -4,6 +4,6 @@ export default class {
   }
   async getHtml() {
     // return `<img id="mainImg" src="/img/main.svg"></img>`;
-    return window.location.href = 'http://localhost:3020/';
+    return (window.location.href = 'http://localhost:3020/');
   }
 }

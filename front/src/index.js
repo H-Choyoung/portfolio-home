@@ -13,7 +13,7 @@ root.innerHTML = `
   <span id="formPlace"></span>
 </div>
 <div id="menu">
-  <div id="buttons"></div>
+  <div id="buttons"></position: absolute;div>
 </div>`;
 // dom 가져오기
 const side = document.getElementById("side");

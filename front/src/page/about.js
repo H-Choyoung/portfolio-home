@@ -96,14 +96,23 @@ export default class {
           font-size: 18pt;
           ">FULL STACK DEVELOPER</p>
           <p style="color:#D9D9D9;
-          padding-bottom: 0.7rem;
-          font-weight: 200;
+          padding-bottom: 1.5rem;
+          font-weight: 300;
           ">: 잡초같은 끈기의 개발자</p>
+          <div style="display: flex; 
+          flex-direction: column;
+          color:#D9D9D9;
+          padding-bottom: 1rem;
+          font-weight: 200;
+          font-size: 14pt;
+          max-width: 30vw;">
+            <p style="padding-bottom: 0.3rem;">전북대학교 졸업 (2013 ~ 2018)</p>
+            <p>[KDT]기업에서 요구하는 프레임워크를 활용한 풀스택 개발자(Node, ECMAscript)양성과정 수료 (2022.07.19 ~ 2023.01.15)</p>
+          </div>
           <a href="https://github.com/H-Choyoung"><img src="/img/github.svg"></a>
         </div>
       </section>
     </div>
-    /* MY SKILLS */
     <div class="sectionContainer"
       style="
       display: flex;

@@ -54,6 +54,10 @@
       stack: 'webpack',
       src: 'https://images2.imgbox.com/c5/9b/Rtb1fSQM_o.png',
     },
+    {
+      stack: 'AutoCAD',
+      src: 'https://img.icons8.com/color/512/autodesk-autocad.png',
+    },
   ];
 
 export default stacks;

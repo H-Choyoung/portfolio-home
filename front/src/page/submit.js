@@ -7,7 +7,7 @@ export default class {
     style="font-family:'KyoboHandwriting2021sjy';
     font-size: 14pt;
     color: #fff;
-    ">전송 완료 되었습니다. 
+    ">준비중 입니다. 
   </div>`;
   }
 }

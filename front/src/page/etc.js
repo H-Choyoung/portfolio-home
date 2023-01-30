@@ -11,7 +11,7 @@ export default class {
     style="font-family:'KyoboHandwriting2021sjy';
     font-size: 14pt;
     color: #fff;
-    ">ETC
+    ">준비 중입니다. 
   </div>`;
   }
 }

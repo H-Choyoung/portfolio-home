@@ -1,5 +1,5 @@
 import hover from "./modules/hover.js"
-import pageRouteEvent from "./modules/pageRouteEvent.js"
+import pageRouteEvent from "./routers/PageRouteEvent.js"
 
 const root = document.getElementById("root");
 /* 메인 레이아웃 지정 */
@@ -9,8 +9,10 @@ root.innerHTML = `
   <img id="sideImg" src="/img/side.png"></img>
 </div>
 <div id="main">
-  <img id="mainImg" src="/img/main.svg"></img>
-  <span id="formPlace"></span>
+  <div id="mainItems">
+    <img id="mainImg" src="/img/main.svg"></img>
+    <p id="copyright">© 2023. Hwang Cho Young. All rights reserved.</p>
+  </div>
 </div>
 <div id="menu">
   <div id="buttons"></position: absolute;div>
@@ -20,7 +22,8 @@ const side = document.getElementById("side");
 const main = document.getElementById("main");
 const menu = document.getElementById("menu");
 const buttons = document.getElementById("buttons");
-const menuTxt = document.getElementsByClassName("menuText");
+const mainItems = document.getElementById('mainItems');
+const copyright = document.getElementById('copyright');
 
 const makeButtons =(parent)=> {
   // 메뉴 버튼
@@ -72,6 +75,25 @@ root.style.backgroundRepeat = "no-repeat"
 root.style.display = "flex"
 root.style.justifyContent = "space-between"
 root.style.overflow = "clip"
+
+/* 메인 컨텐츠 스타일 설정 */
+main.style.display = 'flex';
+main.style.justifyContent = 'center';
+main.style.alignItems = 'center';
+// mainItems.style.width = '60vw';
+mainItems.style.height = '100vh';
+mainItems.style.display = "flex";
+mainItems.style.justifyContent = 'center';
+mainItems.style.alignItems = 'center';
+mainItems.style.flexDirection = 'column';
+copyright.style.position = 'absolute';
+copyright.style.top = '96%';
+// copyright.style.left = '50%';
+// copyright.style.transform = 'translate(0, 50%)';
+copyright.style.fontFamily = 'Inconsolata';
+copyright.style.color = 'grey';
+copyright.style.fontSize = '11pt';
+
 
 /* 왼쪽 장식부분 스타일 설정 */
 side.style.width = "fit-content";

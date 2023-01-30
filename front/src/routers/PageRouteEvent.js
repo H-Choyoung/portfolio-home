@@ -1,4 +1,4 @@
-import router from "./router.js";
+import router from "./Router.js";
 
 const pageRouteEvent = () => {
   document.addEventListener('DOMContentLoaded', () => {

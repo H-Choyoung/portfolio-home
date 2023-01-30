@@ -2,6 +2,12 @@ import scrollEvent from '../modules/scrollEvent.js';
 import titleSet from '../modules/titleSet.js';
 import locationBtns from '../modules/locationBtn.js';
 import contentImgSet from "../modules/imgSet.js"
+import stackContentsSet from '../modules/stackContentsSet.js';
+import videoSet from '../modules/videoSet.js';
+import projectTitleSet from '../modules/projectTitleSet.js'
+import projectTitleAndDesc from '../modules/projectTitleAndDesc.js';
+import detailDescSet from '../modules/detailDescSet.js';
+
 
 export default class {
   constructor() {
@@ -13,138 +19,6 @@ export default class {
       <img src="${imgSrc}" 
       style="width: 60vw;  
       border: 1px solid #d9d9d9;">
-      `;
-    };
-    const videoSet = (src, width, height, radiusSize) => {
-      return `   
-      <span style="display: flex; flex-direction:column;justify-content:center;">        
-      <video controls style="
-        border-top-left-radius: ${radiusSize};
-        border-top-right-radius: ${radiusSize};
-        border-bottom-left-radius: ${radiusSize};
-        border-bottom-right-radius: ${radiusSize};
-        border: 1px solid #d9d9d9;
-        width:${width}; height:${height};
-        ">
-        <source src="${src}" type="video/mp4">
-      </video>
-      </span>`;
-    };
-    const projectTitleSet = (
-      title,
-      githubLink,
-      imgLink = '',
-      imgSrc = '',
-      imgW = '48px'
-    ) => {
-      return `
-      <span style="display: flex; align-items: center;">
-        <p style="font-size:24pt; font-weight:bold; color: #fff; padding: 1.5rem 0 1.5rem 0;">${title}</p>
-        <a href="${githubLink}" target="_blank" style="display: flex; align-items: center;"><img src="/img/github.svg" style="width: 48px; padding-left: 1rem;"></a>
-        <a href="${imgLink}" target="_blank" style="display: flex; align-items: center;"><img src="${imgSrc}" style="width: ${imgW}; padding-left: 0.5rem;"></a>
-      </span>
-      `;
-    };
-    const detailDescSet = (title, content) => {
-      return `  
-      <div class="descs" style="color: #d9d9d9;font-size: 14pt;">
-        <span id="imgPlace"></span>
-        <span style="font-weight: bold;">${title}</span>
-        <span style="border-right: 2px solid #d9d9d9;margin: 0 10px 0 6px;"></span>
-        <span>${content}</span>
-      </div>`;
-      };
-    const projectTitleAndDesc = (
-      projectTitleSet,
-      content,
-      stack,
-      period,
-      member,
-      detailDescSet
-    ) => {
-      return `
-      <div class="titleDescContainer" style="
-      display: flex; align-items: center; flex-direction: column;
-      max-width: 45vw;
-      font-family: 'S-CoreDream-3Light';
-      font-weight: 300;
-      font-size: 16pt;
-      ">
-      ${projectTitleSet}
-      <div style="
-      display: flex; justify-content: space-between; width: 60vw;">
-      <div class="menuAndContents">
-        <div class="menus" 
-        style="
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 26vw;
-        border: 1px solid #d9d9d9; 
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem;
-        background-color: #000; 
-        mix-blend-mode: difference;">
-          <p style="color: #fff; font-weight: bold; white-space: nowrap; padding: 0.3rem 6rem;">프로젝트 상세</p>
-        </div>
-        <div class="descContainer" style="
-        padding: 1.5rem 1rem;
-        width: 26vw;
-        ">
-          <div class="descs" style="color: #d9d9d9;font-size: 14pt; line-height: 130%;
-          display: flex; flex-direction: column;">
-            <div style="padding-bottom: 0.7rem;">
-              <span style="font-weight: bold;">내용 상세</span>
-              <span style="border-right: 2px solid #d9d9d9;margin: 0 10px 0 6px;"></span>
-              <span>${content}</span>
-            </div>
-            <div style="padding-bottom: 0.7rem;">
-              <span style="font-weight: bold;">사용 스택</span>
-              <span style="border-right: 2px solid #d9d9d9;margin: 0 10px 0 6px;"></span>
-              <span>${stack}</span>
-            </div>
-            <div style="padding-bottom: 0.7rem;">
-              <span style="font-weight: bold;">진행 기간</span>
-              <span style="border-right: 2px solid #d9d9d9;margin: 0 10px 0 6px;"></span>
-              <span>${period}</span>
-            </div>
-            <div style="padding-bottom: 0.7rem;">
-              <span style="font-weight: bold;">참여 팀원</span>
-              <span style="border-right: 2px solid #d9d9d9;margin: 0 10px 0 6px;"></span>
-              <span>${member}</span>
-            </div>
-          </div>
-        </div>
-        </div>
-      <div class="menuAndContents">
-        <div class="menus"  
-        style="
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 26vw;
-        border: 1px solid #d9d9d9; 
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem;
-        background-color: #000; 
-        mix-blend-mode: difference;">
-          <p style="color: #fff; font-weight: bold; white-space: nowrap; padding: 0.3rem 6rem;">담당 작업</p>
-        </div>
-        <div class="descContainer" style="
-        padding: 1.5rem 1rem;
-        width: 26vw;
-        ">
-          ${detailDescSet}
-        </div>
-      </div>
-      </div>
-      </div>
       `;
     };
     scrollEvent();
@@ -164,14 +38,21 @@ export default class {
           ${projectTitleAndDesc(
             projectTitleSet(
               '반려동물 동반여행 루트 추천 애플리케이션',
-              'https://github.com/H-Choyoung/team_project_C.git',
-              '',
-              'https://images2.imgbox.com/72/d0/zwXZSRC4_o.png'
+              'https://github.com/H-Choyoung/team_project_C.git'
             ),
             'GPS와 AI기술을 활용해 반려동물 동반이 가능한 여행 루트 및 편의시설을 알려주는 애플리케이션 서비스입니다. 취향에 맞는 시설 해시태그 검색, 나만의 여행루트 짜기, 반려동물 맞춤 포토스팟, 배변 스팟 등을 제공합니다. ',
-            'Language & Framework : React Native, React, JavaScript<br> Server : Node.js, Express.js <br> Database : MySQL <br> Cooperation Tools : git, slack <br> Test&Compile : Android Studio<br> Design &Architecture : figma',
+            stackContentsSet(
+              'JavaScript',
+              'React Native, React',
+              'Node.js, Express.js',
+              'MySQL',
+              'git, slack',
+              'Android Studio, Visual Studio Code',
+              'figma',
+              'Etc'
+            ),
             '2022.09.06 ~ 2022.10.21',
-            '팀 트래블로퍼(Traveloper) 4인',
+            '팀 트래블로퍼(Traveloper) 4인<br><br><img src="/img/hackathon.svg" style="width: 90%">',
             `
             ${detailDescSet(
               '카테고리 스키마 및 DB설계',
@@ -197,7 +78,16 @@ export default class {
               'https://github.com/H-Choyoung/project_a_4'
             ),
             '주식 종목 상승 및 하락 여부, 주식 관련 뉴스, 상세 그래프, 종목 검색, 자체적인 방식으로 주식 매수를 추천하는 기능 등이 있는 웹브라우저 기반 서비스입니다.(제공된 SQL 데이터 활용)',
-            'Language & Library : Front(TypeScript, React, axios, react-router, apexcharts 등)<br> Back(Python, pymysql, numpy, pandas 등)<br> Server : Flask <br> Database : MariaDB, HeidiSQL <br> Cooperation Tools : git, slack <br> Design &Architecture : figma',
+            stackContentsSet(
+              'Front : TypeScript, Back : Python',
+              'React, axios, react-router, apexcharts,  pymysql, numpy, pandas 등',
+              'Node.js, Flask',
+              'MariaDB, HeidiSQL ',
+              'git, slack',
+              'Visual Studio Code',
+              'figma',
+              'Etc'
+            ),
             '2022.11.04 - 2022.12.08',
             `팀 A4 4인 <br><br> ${contentImgSet(
               'https://images2.imgbox.com/f5/e8/ev6H9IqD_o.jpg',
@@ -224,7 +114,7 @@ export default class {
         <!---------------- 프로젝트 3 ---------------->
           <div style="height: fit-content; display: flex; flex-direction: column; align-items: center; padding: 3rem 0;">
           ${titleSet('TEAM PROJECT #3')}
-          ${videoSet('https://gdurl.com/CYA7', '23vw', '100%', '2rem')}
+          ${videoSet('https://gdurl.com/CYA7', '340px', '100%', '2rem')}
           ${projectTitleAndDesc(
             projectTitleSet(
               '대전 교통 정보 제공 서비스',
@@ -234,10 +124,38 @@ export default class {
               '100px'
             ),
             '대전 지역 운전자들을 대상으로 한 교통 정보 제공 서비스입니다. 모바일 기반 반응형 웹사이트로 교통 혼잡도, 단속구간, CCTV, 교통 속보 기능이 있습니다. 카카오맵API 및 국토교통부(ITS) API, 경찰청 API를 주로 활용했습니다.',
-            '스택은이런거 썼음4',
-            '22.00.00 ~ 22.00.02',
-            '0명',
-            '내가 담당한 기능'
+            stackContentsSet(
+              'TypeScript',
+              'React, axios, styled-component 등',
+              'Node.js',
+              'MariaDB',
+              'git, slack',
+              'Visual Studio Code',
+              'figma',
+              'Release',
+              'AWS, ubuntu, NGINX'
+            ),
+            '2022.12.12 ~ 2022.12.28',
+            `팀 하이패스(HIPASS) 4인<br><br> ${contentImgSet(
+              'https://images2.imgbox.com/8f/de/ybtcClpK_o.jpg',
+              '24vw'
+            )}`,
+            `
+            ${detailDescSet(
+              'UI 디자인 및 일부 마크업',
+              `${contentImgSet(
+                'https://images2.imgbox.com/ed/be/vSkyLbHP_o.jpg',
+                '24vw'
+              )}<p>협업 그래픽툴 figma를 이용해서 반응형 사이즈에 따라 바뀌는 UI를 디자인하고, 공통적으로 쓰이는 팝업창, 새로고침 컴포넌트 등을 작업했습니다. </p><br>`
+            )}
+            ${detailDescSet(
+              '단속구간 기능 구현',
+              `${contentImgSet(
+                'https://images2.imgbox.com/fc/eb/5xX7b2M5_o.jpg',
+                '24vw'
+              )}<p>카카오맵 API를 이용해 맵을 그려낸 다음, 무인교통단속카메라 데이터(CSV)를 기반으로 단속 구간 위치와 단속 속도를 표시했습니다. 가독성을 높이기 위해 속도별로 마커를 별도 제작했으며 줌 인&아웃에 따라 마커를 그룹화하는 클러스터러 메서드를 활용했습니다. 마커를 한 번 더 클릭할 시 상세 주소를 볼 수 있습니다. </p><br>`
+            )}
+            `
           )}
         </div>
         <!---------------- 프로젝트 4 ---------------->
@@ -245,12 +163,39 @@ export default class {
           ${titleSet('TOY PROJECT #4')}
           ${imgSet('https://images2.imgbox.com/e1/c6/0VD765Dk_o.gif')}
           ${projectTitleAndDesc(
-            '랜덤 뽑기 게임',
-            '보물 찾기 게임. 랜덤으로 내용물이 바뀝니다.',
-            'TypeScript, JavaScript, React, HTML',
-            '22.12.26 ~ 23.01.07',
-            '1명',
-            '웹팩 세팅, 필요 이미지파일 제작, 랜덤 알고리즘 적용 등'
+            projectTitleSet(
+              '랜덤 뽑기 게임',
+              'https://github.com/H-Choyoung/portfolio',
+              'https://h-choyoung.github.io/my_project_find_the_treasure/',
+              'https://images2.imgbox.com/41/ba/TeJymR0d_o.png',
+              '40px'
+            ),
+            '개인 프로젝트로 작업한 보물 찾기 게임입니다. 클릭시 확률에 따라 랜덤으로 내용물이 바뀝니다. 사용된 이미지는 모두 figma로 제작했습니다.',
+            stackContentsSet(
+              'JavaScript',
+              'React, styled-component',
+              'Node.js',
+              '',
+              'git',
+              'Visual Studio Code',
+              'figma',
+              'Etc'
+            ),
+            '2022.12.26 ~ 2023.01.07',
+            '개인 1명',
+            `
+            ${detailDescSet(
+              'UI 디자인',
+              `${contentImgSet(
+                'https://images2.imgbox.com/82/e3/J0mVQJfR_o.jpg',
+                '24vw'
+              )}<p>와이어 프레임을 제작하면서 필요한 이미지들을 SVG파일로 분리했습니다.</p><br>`
+            )}
+            ${detailDescSet(
+              '랜덤으로 바뀌는 관 색깔과 내용물',
+              `<p>관 컴포넌트, 내용물 컴포넌트를 종류별로 분리한 뒤 내용물마다 일정 확률로 나올 수 있도록 JavaScript Math.random()함수를 사용했습니다.</p><br>`
+            )}
+            `
           )}
         </div>
     </div>

@@ -15,7 +15,7 @@ export default class {
       // console.log(submit.onclick);
       for (let i = 0; i < qr.length; i++) {
         // 빈칸일 시 채워달라는 알림이 뜨는 이벤트
-        submit.addEventListener('submit', (e) => {
+        submit.addEventListener('click', (e) => {
           if (qr[i].value.length == 0) {
             alert('내용을 입력해주세요');
             e.preventDefault(); //이벤트 중단
@@ -38,7 +38,7 @@ export default class {
     ${titleSet('Contact Me')}
     <div style="display: flex; justify-content: center; flex-direction: column;
     max-width: 60vw;">
-    <form class="gform" onclick=${inputAlert()} method="POST" data-email="lll0858630@gmail.com" action="https://script.google.com/macros/s/AKfycbzYgwmNh6Pt_2xIB4PRyKWXNeDU8BPep22oJvTClODtHOYr_bGyGXZzcdUAs9h17vNaXg/exec" target="blankifr">
+    <form class="gform" method="POST" onclick=${inputAlert()} data-email="lll0858630@gmail.com" action="https://script.google.com/macros/s/AKfycbzYgwmNh6Pt_2xIB4PRyKWXNeDU8BPep22oJvTClODtHOYr_bGyGXZzcdUAs9h17vNaXg/exec" target="_blank">
       <div style="display: flex; padding: 0.8rem 0;">
         <label for="name" style="display: block; width: 80px; padding: 0.5rem 0;">name</label>
         <input class="inputs" type="text" name="name" id="name" style="display: block; width: 40vw; background-color:#d9d9d9; opacity: 50%; border: 0px;
@@ -83,7 +83,6 @@ export default class {
       display: flex; justify-content: flex-end;
       ">
         <input class="submit" type="submit" value="SEND MAIL"
-        terget="blankifr"
         style="display: block; 
         border: 1px solid #d9d9d9;
         background-color:#000;

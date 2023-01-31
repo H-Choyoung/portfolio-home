@@ -13,7 +13,7 @@ app.use('/img', express.static(path.resolve(__dirname, 'front', 'img')));
 
 // main
 app.get('/*', (req, res) => {
-  res.sendFile(path.resolve('front', 'main.html'));
+  res.sendFile(path.resolve('front', 'index.html'));
 });
 
 /* 에러페이지 */

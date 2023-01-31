@@ -106,8 +106,9 @@ export default class {
           font-weight: 200;
           font-size: 14pt;
           max-width: 30vw;">
-            <p style="padding-bottom: 0.3rem;">전북대학교 졸업 (2013 ~ 2018)</p>
-            <p>[KDT]기업에서 요구하는 프레임워크를 활용한 풀스택 개발자(Node, ECMAscript)양성과정 수료 (2022.07.19 ~ 2023.01.15)</p>
+            <p style="padding-bottom: 0.5rem;">전북대학교 졸업 (2013 ~ 2018)</p>
+            <p style="padding-bottom: 0.5rem;">[KDT]기업에서 요구하는 프레임워크를 활용한 풀스택 개발자(Node, ECMAscript)양성과정 수료 (2022.07.19 ~ 2023.01.15)</p>
+            <p>lll0858630@gmail.com</p> 
           </div>
           <a href="https://github.com/H-Choyoung"><img src="/img/github.svg"></a>
         </div>

@@ -1,6 +1,5 @@
 import scrollEvent from '../modules/scrollEvent.js';
 import titleSet from '../modules/titleSet.js';
-import locationBtns from '../modules/locationBtn.js';
 import contentImgSet from "../modules/imgSet.js"
 import stackContentsSet from '../modules/stackContentsSet.js';
 import videoSet from '../modules/videoSet.js';
@@ -40,7 +39,7 @@ export default class {
               '반려동물 동반여행 루트 추천 애플리케이션',
               'https://github.com/H-Choyoung/team_project_C.git'
             ),
-            'GPS와 AI기술을 활용해 반려동물 동반이 가능한 여행 루트 및 편의시설을 알려주는 애플리케이션 서비스입니다. 취향에 맞는 시설 해시태그 검색, 나만의 여행루트 짜기, 반려동물 맞춤 포토스팟, 배변 스팟 등을 제공합니다. ',
+            'GPS와 AI 기술을 활용해 반려동물 동반이 가능한 여행 경로 및 편의시설을 알려주는 애플리케이션 서비스입니다. 취향에 맞는 시설 해시태그 검색, 나만의 여행 경로 짜기, 반려동물 맞춤 포토스팟, 배변 스팟 등을 제공합니다. ',
             stackContentsSet(
               'JavaScript',
               'React Native, React',
@@ -48,7 +47,7 @@ export default class {
               'MySQL',
               'git, slack',
               'Android Studio, Visual Studio Code',
-              'figma',
+              'Figma',
               'Etc'
             ),
             '2022.09.06 ~ 2022.10.21',
@@ -59,11 +58,11 @@ export default class {
               `${contentImgSet(
                 'https://images2.imgbox.com/cb/1b/zSL86ed7_o.jpg',
                 '24vw'
-              )}<p>요구사항정의서에 따라 카테고리를 분류하고 스키마를 설계했습니다. 공공데이터포털의 데이터(CSV)와 API를 활용했으며, DBMS로 MySQL을 사용했습니다.</p><br>`
+              )}<p>요구사항 정의서에 따라 카테고리를 분류하고 스키마를 설계했습니다. 공공데이터포털의 데이터(CSV)와 API를 활용했으며, DBMS로 MySQL을 사용했습니다.</p><br>`
             )}
             ${detailDescSet(
               '카테고리 필터링 기능 구현',
-              `<p>지역/견종/장소에 따라 순차적으로 카테고리를 필터링할 수 있는 알고리즘을 구성했습니다.</p>`
+              `<p>지역/견종/장소별로 순차적으로 카테고리를 필터링할 수 있는 알고리즘을 구성했습니다.</p>`
             )}
             `
           )}
@@ -77,7 +76,7 @@ export default class {
               '주식 매수 추천서비스',
               'https://github.com/H-Choyoung/project_a_4'
             ),
-            '주식 종목 상승 및 하락 여부, 주식 관련 뉴스, 상세 그래프, 종목 검색, 자체적인 방식으로 주식 매수를 추천하는 기능 등이 있는 웹브라우저 기반 서비스입니다.(제공된 SQL 데이터 활용)',
+            '주식 종목 상승 및 하락 여부, 주식 관련 뉴스, 상세 그래프, 종목 검색, 자체적인 방식으로 주식 매수를 추천하는 기능 등이 있는 웹브라우저 기반 서비스입니다. (제공된 SQL 데이터 활용)',
             stackContentsSet(
               'Front : TypeScript, Back : Python',
               'React, axios, react-router, apexcharts,  pymysql, numpy, pandas 등',
@@ -85,7 +84,7 @@ export default class {
               'MariaDB, HeidiSQL ',
               'git, slack',
               'Visual Studio Code',
-              'figma',
+              'Figma',
               'Etc'
             ),
             '2022.11.04 - 2022.12.08',
@@ -99,14 +98,14 @@ export default class {
               `${contentImgSet(
                 'https://images2.imgbox.com/9b/b7/gKc3bbqN_o.jpg',
                 '24vw'
-              )}<p>마켓(KOSPI, KOSDAQ)에 따라 2열로 구분한 뒤 종목명, 등락가, 등락율, 종가로 행을 구성한 뒤 등락가를 기준으로 순위별로 정렬했습니다. <br> 기존 DB에는 등락 관련 데이터가 없었기에 DB테이블에 공통키를 삽입한 뒤 SQL쿼리로 JOIN, 등락가와 등락율을 연산해서 테이블에 출력했습니다. </p><br>`
+              )}<p>마켓(KOSPI, KOSDAQ)에 따라 2열로 구분한 뒤 종목명, 등락가, 등락률, 종가로 행을 구성한 뒤 등락가를 기준으로 순위별로 정렬했습니다. <br> 기존 DB에는 등락 관련 데이터가 없었기에 DB 테이블에 공통키를 삽입한 뒤 SQL쿼리로 JOIN, 등락가와 등락률을 연산해서 테이블에 출력했습니다. </p><br>`
             )}
             ${detailDescSet(
               '일정 계획, 프로젝트 작업내역 기록',
               `${contentImgSet(
                 'https://images2.imgbox.com/29/70/HcRo6gs7_o.jpg',
                 '24vw'
-              )}<p>요구사항정의서가 결정된 뒤 주어진 기간에 따라 일정을 계획하고 실행했습니다.</p><br>`
+              )}<p>요구사항 정의서가 결정된 뒤 주어진 기간에 따라 일정을 계획하고 실행했습니다.</p><br>`
             )}
             `
           )}
@@ -131,7 +130,7 @@ export default class {
               'MariaDB',
               'git, slack',
               'Visual Studio Code',
-              'figma',
+              'Figma',
               'Release',
               'AWS, ubuntu, NGINX'
             ),
@@ -146,14 +145,14 @@ export default class {
               `${contentImgSet(
                 'https://images2.imgbox.com/ed/be/vSkyLbHP_o.jpg',
                 '24vw'
-              )}<p>협업 그래픽툴 figma를 이용해서 반응형 사이즈에 따라 바뀌는 UI를 디자인하고, 공통적으로 쓰이는 팝업창, 새로고침 컴포넌트 등을 작업했습니다. </p><br>`
+              )}<p>협업 그래픽 툴 Figma를 이용해서 반응형 사이즈에 따라 바뀌는 UI를 디자인하고, 공통으로 쓰이는 팝업창, 새로고침 컴포넌트 등을 작업했습니다. </p><br>`
             )}
             ${detailDescSet(
               '단속구간 기능 구현',
               `${contentImgSet(
                 'https://images2.imgbox.com/fc/eb/5xX7b2M5_o.jpg',
                 '24vw'
-              )}<p>카카오맵 API를 이용해 맵을 그려낸 다음, 무인교통단속카메라 데이터(CSV)를 기반으로 단속 구간 위치와 단속 속도를 표시했습니다. 가독성을 높이기 위해 속도별로 마커를 별도 제작했으며 줌 인&아웃에 따라 마커를 그룹화하는 클러스터러 메서드를 활용했습니다. 마커를 한 번 더 클릭할 시 상세 주소를 볼 수 있습니다. </p><br>`
+              )}<p>카카오맵 API를 이용해 지도를 그려낸 다음, 무인 교통 단속카메라 데이터(CSV)를 기반으로 단속 구간 위치와 단속 속도를 표시했습니다. 가독성을 높이기 위해 속도별로 마커를 별도 제작했으며 줌 인 & 아웃에 따라 마커를 그룹화하는 클러스터러 메서드를 활용했습니다. 마커를 한 번 더 클릭할 시 상세 주소를 볼 수 있습니다. </p><br>`
             )}
             `
           )}
@@ -170,7 +169,7 @@ export default class {
               'https://images2.imgbox.com/41/ba/TeJymR0d_o.png',
               '40px'
             ),
-            '개인 프로젝트로 작업한 보물 찾기 게임입니다. 클릭시 확률에 따라 랜덤으로 내용물이 바뀝니다. 사용된 이미지는 모두 figma로 제작했습니다.',
+            '개인 프로젝트로 작업한 보물찾기 게임입니다. 클릭시 확률에 따라 무작위로 내용물이 바뀝니다. 사용된 이미지는 모두 Figma로 제작했습니다.',
             stackContentsSet(
               'JavaScript',
               'React, styled-component',
@@ -178,7 +177,7 @@ export default class {
               '',
               'git',
               'Visual Studio Code',
-              'figma',
+              'Figma',
               'Etc'
             ),
             '2022.12.26 ~ 2023.01.07',

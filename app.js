@@ -8,12 +8,13 @@ const port = process.env.PORT || 3020; //포트 지정
  * path.resolve로 인자로 받은 값들을 하나의 문자열로 만든 뒤 정적 디렉토리에 대한 마운트 경로 지정
  * app.js 실행경로 + "/path"를 localhost:port/path로 마운트
  */
+app.use('/front', express.static(path.resolve(__dirname, 'front')));
 app.use('/src', express.static(path.resolve(__dirname, 'front', 'src')));
 app.use('/img', express.static(path.resolve(__dirname, 'front', 'img')));
 
 // main
 app.get('/*', (req, res) => {
-  res.sendFile(path.resolve('front', 'index.html'));
+  res.sendFile(path.resolve('', 'index.html'));
 });
 
 /* 에러페이지 */
